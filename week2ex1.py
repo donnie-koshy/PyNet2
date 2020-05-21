@@ -11,9 +11,12 @@ router={
 net_connect=ConnectHandler(**router)
 device=net_connect.find_prompt().rstrip('#')
 print("\n Logged into "+device)
-#output=net_connect.send_command_timing("ping")
-output=net_connect.send_command("ping",expect_string=':')
+net_connect.send_command_timing('ping')
+net_connect.send_command_timing('\n')
+net_connect.send_command('8.8.8.8')
+output=net_connect.send_command_timing("\n")
 print(output)
 print(net_connect.find_prompt())
+
 net_connect.disconnect()
 
