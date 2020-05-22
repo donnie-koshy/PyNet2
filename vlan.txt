@@ -1,0 +1,10 @@
+vlan 625
+name Internet
+vlan 626
+name Data
+vlan 627
+name App-Server
+vlan 628
+name DB-Server
+vlan 629
+name Mail-Server
