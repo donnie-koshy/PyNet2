@@ -26,6 +26,7 @@ print(net_connect.find_prompt())
 
 net_connect.write_channel("disable\n")
 
+#Sleep required between write and read channels, as advised by Kirk
 time.sleep(2)
 
 print (net_connect.read_channel())
